@@ -14,11 +14,6 @@
   function handleSubmit(event) {
     console.log('handleSubmit');
   }
-
-  function handleNumberDays(event) {
-    nbDaysTrainingPerWeek = event.target.value;
-    console.log(nbDaysTrainingPerWeek.value);
-  }
 </script>
 
 <style>
