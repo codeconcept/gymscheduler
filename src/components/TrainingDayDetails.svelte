@@ -1,4 +1,8 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
   export let title;
   let exercise = {
     activity: "",
@@ -10,6 +14,8 @@
 
   function handleSubmit() {
     exercises = [...exercises, { ...exercise }];
+    dispatch("add-exercise", { ...exercise, title: title });
+    // reset
     exercise = {
       activity: "",
       sets: 4,
