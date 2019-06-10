@@ -24,6 +24,7 @@
   function handleNewExercise(event) {
     console.log("on:add-exercise", event.detail);
     summary = [...summary, event.detail];
+    isSummaryReady = false;
   }
 
   function generateSummary() {
