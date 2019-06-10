@@ -52,7 +52,12 @@
       <button type="submit">add exercise</button>
     </form>
   </div>
-  <div>exercise: {stringify(exercise)} </div>
-  <div>exercises: {stringifyArray(exercises)}</div>
+  <div>
+    <ul>
+      {#each exercises as ex}
+        <li>{ex.activity}: {ex.sets} sets of {ex.reps} reps</li>
+      {/each}
+    </ul>
+  </div>
 
 </div>
